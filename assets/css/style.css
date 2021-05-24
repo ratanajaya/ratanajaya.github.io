@@ -404,7 +404,7 @@ section {
 # Akills
 --------------------------------------------------------------*/
 .skills .progress {
-  height: 60px;
+  height: 50px;
   display: block;
   background: none;
   border-radius: 0;
@@ -1071,4 +1071,21 @@ section {
     width: auto;
     padding-right: 20px 15px;
   }
+}
+
+
+.linkedinText{
+  color: gainsboro;
+}
+
+.textJustify{
+  text-align: justify;
+}
+
+.noMargin{
+  margin-right: 0px!important;
+}
+
+.skillTitle{
+  font-weight: bold;
 }
