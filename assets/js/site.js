@@ -5,8 +5,8 @@
 //   contain: true
 // });
 
-const urlApi = 'https://localhost:44365/';
-//const urlApi = 'http://wkrapi.azurewebsites.net/';
+//const urlApi = 'https://localhost:44365/';
+const urlApi = 'http://wkrapi.azurewebsites.net/';
 
 (function () {
 
