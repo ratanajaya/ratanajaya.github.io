@@ -1089,3 +1089,57 @@ section {
 .skillTitle{
   font-weight: bold;
 }
+
+.carousel-cell{
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.carousel-media{
+  width: 300px;
+  width: 200px;
+}
+
+.carousel {
+  background: #EEE;
+}
+
+.carousel img {
+  display: block;
+  height: 400px;
+  margin-right: 5px;
+}
+
+.carousel video {
+  display: block;
+  height: 400px;
+  margin-right: 5px;
+}
+.carousel.carousel-wrapper {
+  display: block;
+  height: 400px;
+  margin-right: 5px;
+}
+/* 
+@media screen and ( min-width: 768px ) {
+  .carousel img {
+    height: 400px;
+  }
+  .carousel video {
+    height: 400px;
+  }
+} */
+
+.sliderImg{
+  height: 400px;
+}
+
+.link-tryit{
+  font-size: xx-large;
+}
+
+.colMedia{
+  width: 100%;
+}
