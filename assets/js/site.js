@@ -1,5 +1,13 @@
+// var elem = document.querySelector('.main-carousel');
+// var flkty = new Flickity(elem, {
+//   // options
+//   cellAlign: 'left',
+//   contain: true
+// });
+
 (function () {
-  const urlApi = 'https://localhost:44365/';
+  //const urlApi = 'https://localhost:44365/';
+  const urlApi = 'http://wkrapi.azurewebsites.net/';
 
   document.getElementById("btnSubmit").addEventListener("click", (e) => {
     e.preventDefault();

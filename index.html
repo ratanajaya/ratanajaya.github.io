@@ -25,6 +25,7 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- <link href="assets/vendor/flickity/flickity.css" rel="stylesheet"> -->
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -47,11 +48,11 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="assets/img/Self-Portrait.png" alt="" class="img-fluid rounded-circle">
+        <img src="assets/img/Self-PC.png" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="index.html">Ratanajaya</a></h1>
         <div class="social-links mt-3 text-center">
-          <a href="https://www.linkedin.com/in/ratanajaya/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <span class="linkedinText">LinkedIn</span>
+          <a href="https://github.com/ratanajaya" class="github"><i class="bx bxl-github"></i></a>
+          <a href="https://linkedin.com/in/ratanajaya" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         </div>
       </div>
 
@@ -81,7 +82,6 @@
   </section><!-- End Hero -->
 
   <main id="main">
-
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
       <div class="container">
@@ -369,128 +369,64 @@
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio section-bg">
       <div class="container">
-
         <div class="section-title">
           <h2>Portfolio</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-            in iste officiis commodi quidem hic quas.</p>
+          <p class="textJustify">This section is a showcase of an application that I've spent hundreds of hours
+            working on. It's a
+            RESTful application built on <strong>.Net 5 & ReactJs</strong> designed to view and manage media files in my
+            <strong>home-server</strong>. With the front-end app avaliable in both standard web page (SPA) and Android
+            Cordova, this
+            application can be used on all devices connected to my local network.
+          </p>
+          <br />
+          <p class="textJustify">You check out the public build of the app, hosted on Azure and Github pages <a
+              href="/wkr">here</a> or
+            through the link bellow.</p>
         </div>
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <video class="colMedia" src="assets/img/portfolio/wkr-001.webm" autoplay="autoplay" loop="loop" />
+          </div>
+          <div class="col-lg-4">
+            <video class="colMedia" src="assets/img/portfolio/wkr-002.webm" autoplay="autoplay" loop="loop" />
+          </div>
+          <div class="col-lg-4">
+            <img class="colMedia" src="assets/img/portfolio/wkr-winform.png" alt="look-out" />
+            <p class="textJustify">There's also a companion desktop app built on WinForm to convert an album of images
+              into app-readable format and post them to the home-server storage.</p>
           </div>
         </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
+      </div>
+      <!-- <div class="container">
+        <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "wrapAround": true }'>
+          <div class="carousel-wrapper">
+            <video src="assets/img/portfolio/wkr-001.webm" autoplay="autoplay" loop="loop" />
           </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
+          <div class="carousel-wrapper">
+            <img src="assets/img/portfolio/wkr-main.png" alt="One World Trade" />
           </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
+          <div class="carousel-wrapper">
+            <video src="assets/img/portfolio/wkr-002.webm" autoplay="autoplay" loop="loop" />
           </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
+          <div>
+            <img src="assets/img/portfolio/wkr-winform.png" alt="look-out" />
           </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
-                  class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
         </div>
-
+      </div> -->
+      <!-- <div class="container">
+        <div class="my-slider">
+          <div><img class="sliderImg" src="assets/img/portfolio/wkr-main.png" alt="One World Trade" /></div>
+          <div><img class="sliderImg" src="assets/img/portfolio/wkr-winform.png" alt="look-out" /></div>
+          <div></div>
+        </div>
+      </div> -->
+      <br /><br />
+      <div class="container text-center">
+        <a href="/wkr" class="link-tryit">
+          ← Try it here →
+        </a>
       </div>
     </section><!-- End Portfolio Section -->
 
@@ -501,7 +437,8 @@
           <h2>Message Me</h2>
           <p>If you're a friend, coworker, or acquaintance, feel free to leave me a message! In fact, I really hope you
             do 😊</p>
-          <p>Note: this is <strong>not</strong> a proper way to contact me for a job</p>
+          <br />
+          <p><strong>Note:</strong> this is not a proper channel to contact me for a job</p>
         </div>
 
         <div class="row" data-aos="fade-in">
@@ -564,6 +501,7 @@
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/sweetalert/sweetalert.min.js"></script>
+  <!-- <script src="assets/vendor/flickity/flickity.min.js"></script> -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
