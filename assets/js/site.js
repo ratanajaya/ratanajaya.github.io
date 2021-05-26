@@ -5,53 +5,13 @@
 //   contain: true
 // });
 
-//const urlApi = 'https://localhost:44365/';
-const urlApi = 'https://wkrapi.azurewebsites.net/';
-
-(function () {
-
-  document.getElementById("btnSubmit").addEventListener("click", (e) => {
-    e.preventDefault();
-
-    const messageModel = {
-      senderName: document.getElementById('senderName').value,
-      content: document.getElementById('message').value,
-      recaptchaToken: recaptchaToken
-    };
-
-    console.log('messageModel', messageModel);
-
-    fetch(urlApi + 'Portfolio/SendMessage', {
-      method: 'post',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(messageModel)
-    }).then(res => {
-      if (res.status === 200) {
-        swal("Success!", "Message Sent!", "success");
-      }
-      else if (res.status === 401) {
-        swal("error", "ReCaptcha verivication failed or expired", "error");
-      }
-      else {
-        swal("error", res.status.toString(), "error");
-        console.log('error', res);
-      }
-    })
-      .catch(function (err) {
-        swal("Fetch Error", JSON.stringify(err), "error");
-        console.log('Fetch Error', err);
-      });
-  });
-
-})();
-
+//const urlApi = 'https://localhost:44302/';
+const urlApi = 'https://wkr.azurewebsites.net/';
+var urlDiag = "https://ipgeolocation.abstractapi.com/v1/?api_key=7a08b9680efb4d0eb1a62d267e8e0a19";
 var recaptchaToken = null;
+var diagResult = null;
 
 function recaptchaCallback(val) {
-  //console.log('recaptchaCallback', val);
   recaptchaToken = val;
 }
 
@@ -65,10 +25,8 @@ function httpGetAsync(url, callback) {
   xmlHttp.send(null);
 }
 
-var diagUrl = "https://ipgeolocation.abstractapi.com/v1/?api_key=7a08b9680efb4d0eb1a62d267e8e0a19"
-
-httpGetAsync(diagUrl, (res) => {
-  var diagResult = JSON.parse(res);
+httpGetAsync(urlDiag, (res) => {
+  diagResult = JSON.parse(res);
   //console.log('diag result', diagResult);
 
   fetch(urlApi + 'Portfolio/Diagnosis', {
@@ -88,5 +46,42 @@ httpGetAsync(diagUrl, (res) => {
   })
     .catch(function (err) {
       console.log('post diag fetch error', err);
+    });
+});
+
+document.getElementById("btnSubmit").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const messageModel = {
+    senderName: document.getElementById('senderName').value,
+    content: document.getElementById('message').value,
+    recaptchaToken: recaptchaToken,
+    ipAddress: diagResult !== null ? diagResult.ip_address : "[BUG] diagResult is null"
+  };
+
+  console.log('messageModel', messageModel);
+
+  fetch(urlApi + 'Portfolio/SendMessage', {
+    method: 'post',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(messageModel)
+  }).then(res => {
+    if (res.status === 200) {
+      swal("Success!", "Message Sent!", "success");
+    }
+    else if (res.status === 401) {
+      swal("error", "ReCaptcha verivication failed or expired", "error");
+    }
+    else {
+      swal("error", res.status.toString(), "error");
+      console.log('error', res);
+    }
+  })
+    .catch(function (err) {
+      swal("Fetch Error", JSON.stringify(err), "error");
+      console.log('Fetch Error', err);
     });
 });
