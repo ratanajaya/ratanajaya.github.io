@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.82aee74a.css",
-    "main.js": "/static/js/main.98204927.js",
+    "main.js": "/static/js/main.59924ea7.js",
     "static/media/Roboto-Italic-webfont.woff": "/static/media/Roboto-Italic-webfont.7cb1470124dc7c8ae78c.woff",
     "static/media/Roboto-Medium-webfont.woff": "/static/media/Roboto-Medium-webfont.7157933a0a31a588c00f.woff",
     "static/media/Roboto-Bold-webfont.woff": "/static/media/Roboto-Bold-webfont.232db9bf3c3932654a51.woff",
@@ -10,10 +10,10 @@
     "index.html": "/index.html",
     "static/media/udemy-seeklogo.svg": "/static/media/udemy-seeklogo.a5a9f8a55eb6b3bbc89a8f70358a365c.svg",
     "main.82aee74a.css.map": "/static/css/main.82aee74a.css.map",
-    "main.98204927.js.map": "/static/js/main.98204927.js.map"
+    "main.59924ea7.js.map": "/static/js/main.59924ea7.js.map"
   },
   "entrypoints": [
     "static/css/main.82aee74a.css",
-    "static/js/main.98204927.js"
+    "static/js/main.59924ea7.js"
   ]
 }
